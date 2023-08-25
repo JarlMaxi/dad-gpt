@@ -1,19 +1,19 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
-import { header } from './header.js';
+import React from "react";
+import Title from "./components/Title";
+import JokeButton from './components/JokeButton';
+import Footer from './components/Footer';
 
-
+ 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>
-          Dad jokes, when you get help getting it up (in your your head).
-        </h2>
-      </header>
+    <div className="text-bg-primary p-3">
+      <Title />
+      <JokeButton />
+      <Footer />
     </div>
-  );
+  )
 }
 
 export default App;

@@ -1,6 +1,8 @@
-const { useState } = require("react");
 import React from "react";
 import axios from "axios";
+
+const { useState } = require("react");
+
 
 function JokeButton() {
   const [joke, setJoke] = useState("");
@@ -8,7 +10,7 @@ function JokeButton() {
 
   const fetchJoke = async () => {
     try {
-        const response = await axios.get('http://localhost:5000/get-joke');
+        const response = await axios.get('http://localhost:5000/dad-joke');
         setJoke(response.data.joke);
         setShowButton(false);
     } catch (error) {
@@ -19,10 +21,12 @@ function JokeButton() {
 return (
     <div>
       {showButton ? (
-        <button onClick={fetchJoke}>Get a Dad Joke!</button>
+        <button className='btn btn-secondary' onClick={fetchJoke}>Get a Dad Joke!</button>
       ) : (
         <h3>{joke}</h3>
       )}
     </div>
   );
 }
+
+export default JokeButton;
