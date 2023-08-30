@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import './JokeButton.css'
 
 const { useState } = require("react");
 
@@ -19,7 +20,7 @@ function JokeButton() {
 };
 
 return (
-    <div>
+    <div className='joke'>
       {showButton ? (
         <button className='btn btn-secondary' onClick={fetchJoke}>Get a Dad Joke!</button>
       ) : (

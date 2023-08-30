@@ -4,15 +4,18 @@ import React from "react";
 import Title from "./components/Title";
 import JokeButton from "./components/JokeButton";
 import Footer from "./components/Footer";
+import FadedImage from "./components/FadedImage";
+import backgroundImage from './assets/example.jpg';
 
 function App() {
   return (
-    <div className="text-bg-primary p-3 App">
-      <Title />
-      <div className='joke'>
+    <div className="App">
+        <Title />
+        <FadedImage src={backgroundImage} alt='test' />
+      <div>
         <JokeButton />
       </div>
-      <div className="Footer">
+      <div>
         <Footer />
       </div>
     </div>

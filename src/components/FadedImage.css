@@ -1,0 +1,32 @@
+/* FadedImage.css */
+
+.image-container {
+    position: relative;
+    width: 50%;     /* Ensuring it takes full width */
+    height: 50vh;   /* Adjust based on how tall you want the background to be. */
+    background-color: black;
+    overflow: hidden;
+    align-self: center;
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.image-container::before,
+.image-container::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 40%, black 100%);
+    z-index: 1;
+}
