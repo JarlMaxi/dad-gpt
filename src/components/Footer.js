@@ -3,8 +3,10 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <div>
-            <footer>This is an exploration into development. It will look like it does</footer>
+        <div className="Footer">
+            <footer>
+                This is an exploration into development. It will continue improve with time. 
+            </footer>
         </div>
     )
 }
