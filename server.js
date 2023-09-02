@@ -1,9 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const OpenAI = require("openai");
 const cors = require("cors");
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.envOPENAI_API_KEY,
 });
 
 const app = express();
@@ -14,7 +15,17 @@ app.use(cors());
 app.get("/dad-joke", async (req, res) => {
   try {
     const completion = await openai.chat.completions.create({
-      messages: [{ role: "system", content: "Tell me a dad joke" }],
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a great jokester who only tell dad jokes. When prompted, tell a new dad joke every time. Do not mention things like 'sure, here it is'. Just provide the joke.",
+        },
+        {
+          role: "user",
+          content: "Tell me a dad joke",
+        },
+      ],
       model: "gpt-3.5-turbo",
     });
 
@@ -28,4 +39,5 @@ app.get("/dad-joke", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log("Server running on 5000");
+  console.log(openai.apiKey);
 });
