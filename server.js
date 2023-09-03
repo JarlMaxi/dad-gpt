@@ -38,6 +38,5 @@ app.get("/dad-joke", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server running on 5000");
-  console.log(openai.apiKey);
+  console.log("Server running on 5000 \nControl + C to quit");
 });
