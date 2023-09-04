@@ -11,7 +11,7 @@ function JokeButton() {
 
   const fetchJoke = async () => {
     try {
-        const response = await axios.get(`${process.env.REACT_BACKEND_URL}/dad-joke`);
+        const response = await axios.get(`https://dad-joke-494592f7bea7.herokuapp.com/dad-joke`);
         setJoke(response.data.joke);
         setShowButton(false);
     } catch (error) {
