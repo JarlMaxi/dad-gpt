@@ -5,7 +5,7 @@ import Title from "./components/Title";
 import JokeButton from "./components/JokeButton";
 import Footer from "./components/Footer";
 import FadedImage from "./components/FadedImage";
-import backgroundImage from './assets/dad.png';
+import backgroundImage from './assets/jarno.png';
 
 function App() {
   return (
