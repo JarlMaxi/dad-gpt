@@ -10,8 +10,8 @@ const openai = new OpenAI({
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
-
+app.use(cors({ origin: 'https://jokingtaomuch.com'}));
+console.log("process.env.PORT", process.env.PORT);
 app.get("/dad-joke", async (req, res) => {
   try {
     const completion = await openai.chat.completions.create({
@@ -33,7 +33,7 @@ app.get("/dad-joke", async (req, res) => {
     res.json({ joke });
   } catch (error) {
     console.log("Error fetching joke:", error);
-    res.status(500).json;
+    res.status(500).json({ error: error.message });
   }
 });
 
