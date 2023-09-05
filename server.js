@@ -10,7 +10,7 @@ const openai = new OpenAI({
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: 'https://jokingtaomuch.com'}));
+app.use(cors());
 console.log("process.env.PORT", process.env.PORT);
 app.get("/dad-joke", async (req, res) => {
   try {
@@ -38,5 +38,5 @@ app.get("/dad-joke", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server running on 5000 \nControl + C to quit");
+  console.log(`Server running on ${PORT}`);
 });
