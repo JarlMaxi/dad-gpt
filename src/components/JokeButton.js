@@ -11,8 +11,13 @@ function JokeButton() {
 
   const fetchJoke = async () => {
     try {
-      const response = await axios.get(`${backendUrl}/dad-joke`);
-      setJoke(response.data.joke);
+      const response = await axios.get(`https://icanhazdadjoke.com/`,{
+      headers: {
+        'Accept': 'text/plain',
+        'User-Agent': 'Max'
+      },
+      });
+      setJoke(response.data);
       setShowButton(false);
     } catch (error) {
       console.error("Error fetching joke:", error);
