@@ -26,13 +26,10 @@ function JokeButton() {
 
   return (
     <div className="joke">
-      {showButton ? (
+        <h3>{joke}</h3>
         <button className="btn btn-secondary" onClick={fetchJoke}>
           Get a Dad Joke!
         </button>
-      ) : (
-        <h3>{joke}</h3>
-      )}
     </div>
   );
 }
