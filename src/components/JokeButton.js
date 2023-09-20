@@ -22,7 +22,7 @@ function JokeButton() {
 
   return (
     <div className="joke">
-        <h3>{joke}</h3>
+        <h5>{joke}</h5>
         <button className="btn btn-secondary" onClick={fetchJoke}>
           Get a Dad Joke!
         </button>

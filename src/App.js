@@ -9,7 +9,7 @@ import backgroundImage from './assets/jarnohugo.png';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App orientation-lock">
         <Title />
         <FadedImage src={backgroundImage} alt='test' />
       <div>
