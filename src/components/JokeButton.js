@@ -21,7 +21,7 @@ function JokeButton() {
   };
 
   return (
-    <div className="joke">
+    <div className="joke smaller-size">
         <h5>{joke}</h5>
         <button className="btn btn-secondary" onClick={fetchJoke}>
           Get a Dad Joke!

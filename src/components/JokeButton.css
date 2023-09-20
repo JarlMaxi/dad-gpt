@@ -1,6 +1,13 @@
 .joke {
-    margin-top: 25px;
-    z-index: 1;
-    color: white;
-    margin-bottom: 100px;
+  margin-top: 25px;
+  z-index: 1;
+  color: white;
+  margin-bottom: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .smaller-size {
+    font-size: 0.7rem;
   }
+}
